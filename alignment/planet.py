@@ -18,6 +18,7 @@ class Planet(object):
         self.period = period
 
     def __str__(self):
+        """ Returns the name of the planet"""
         return  self.name
 
     def move(self, ticks):
@@ -36,6 +37,8 @@ class Planet(object):
         Returns:
             The angle of the planet after ticks time.
         """
+        if ticks < 0:
+            return None
         ticks = ticks % self.period
         theta = self.theta + (2 * PI * ticks)/self.period
         return theta

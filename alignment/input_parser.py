@@ -26,7 +26,11 @@ class InputParser(object):
                     if not 'system' in conf:
                         raise AlignmentInputError('config file does not have system header')
                     logging.info('conf file:\n', conf['system'])
-                    return conf['system']
+                for obj in conf['system']:
+                    for key in obj.keys():
+                        if not key in ('name', 'theta', 'radius', 'period'):
+                            raise AlignmentInputError('invalid config tag {}'.format(key))
+                return conf['system']
             except IOError as e:
                 logging.error(str(e))
                 raise e
