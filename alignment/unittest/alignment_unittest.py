@@ -33,7 +33,7 @@ class TestPlanetModule(unittest.TestCase):
 class TestInputParser(unittest.TestCase):
     ''' Tests the input parser which parse yaml file '''
     def test_input_parser_with_file(self):
-        ip = InputParser('sample.yaml')
+        ip = InputParser('../configs/sample.yaml')
         conf = ip.get_objects()
         self.assertEqual(len(conf), 4, 'wrong parsing has been done')
 
@@ -46,7 +46,7 @@ class TestInputParser(unittest.TestCase):
             self.assertEqual(None, None)
 
     def test_input_parser_with_wrong_values(self):
-        ip = InputParser('sample_invalid.yaml')
+        ip = InputParser('../configs/sample_invalid.yaml')
         try:
             conf = ip.get_objects()
             self.assertEqual(conf, None, 'Wrong parsing is done')
@@ -54,7 +54,7 @@ class TestInputParser(unittest.TestCase):
             self.assertEqual(None, None)
 
     def test_input_parser_with_wrong_values(self):
-        ip = InputParser('sample_invalid_tag.yaml')
+        ip = InputParser('../configs/sample_invalid_tag.yaml')
         try:
            conf = ip.get_objects()
            self.assertEqual(conf, None, 'Wrong parsing is done')

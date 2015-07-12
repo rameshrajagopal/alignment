@@ -1,5 +1,12 @@
 #!/usr/bin/env python
 from __future__ import print_function
+try:
+    from future_builtins import zip as izip
+except ImportError:
+    try:
+        from itertools import izip
+    except ImportError:
+        from builtins import zip as izip
 from cmdline_parser import CmdlineParser, Usage
 from arbitory_solar_system import ArbitarySolarSystem
 from alignment_exceptions import AlignmentInputError

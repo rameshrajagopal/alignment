@@ -14,3 +14,7 @@ alignment.egg-info/requires.txt
 alignment.egg-info/top_level.txt
 alignment/plugins/__init__.py
 alignment/plugins/five_degree_alignment.py
+alignment/plugins/ten_degree_alignment.py
+alignment/plugins/zero_degree_alignment.py
+alignment/unittest/__init__.py
+alignment/unittest/alignment_unittest.py

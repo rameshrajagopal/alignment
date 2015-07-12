@@ -1,7 +1,14 @@
 #!/usr/bin/env python
 from __future__ import print_function
 from math import pi as PI
-from itertools import tee, izip
+try:
+    from future_builtins import zip as izip
+except ImportError:
+    try:
+        from itertools import izip
+    except ImportError:
+        from builtins import zip as izip
+from itertools import tee
 
 def pairwise(iterable):
     """ Returns the pairwise seq of iterable"""
