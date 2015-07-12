@@ -21,10 +21,10 @@ def load_plugin(plugin):
         logging.warning('Module {} is not found'.format(module))
     return plugin_module
 
-#main method
-if __name__ == '__main__':
+def main_application():
     parser = CmdlineParser()
     parser.parse()
+    #input required parameters
     config_file = parser.get_config_file()
     plugins = parser.get_plugins_list()
     time    = parser.get_ticks()
@@ -47,3 +47,6 @@ if __name__ == '__main__':
         else:
             print("plugin doesn't support print_alignement method")
 
+#main method
+if __name__ == '__main__':
+    main_application()

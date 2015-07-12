@@ -1,0 +1,105 @@
+system:
+    - name: planet-A
+      theta: 0
+      radius: 1
+      period: 20
+    - name: planet-B
+      theta: 0
+      radius: 5
+      period: 30
+    - name: planet-C
+      theta: 2.7
+      radius: 10
+      period: 60
+    - name: planet-D
+      theta: 3.7
+      radius: 1
+      period: 20
+    - name: planet-E
+      theta: 1.7
+      radius: 5
+      period: 30
+    - name: planet-F
+      theta: 0.7
+      radius: 10
+      period: 60
+    - name: planet-G
+      theta: 0.6
+      radius: 1
+      period: 20
+    - name: planet-H
+      theta: 0.2
+      radius: 5
+      period: 30
+    - name: planet-I
+      theta: 1.2
+      radius: 10
+      period: 60
+    - name: planet-J
+      theta: 3.2
+      radius: 1
+      period: 20
+    - name: planet-K
+      theta: 4.2
+      radius: 5
+      period: 30
+    - name: planet-L
+      theta: 5.2
+      radius: 10
+      period: 60
+    - name: planet-M
+      theta: 6.1
+      radius: 1
+      period: 20
+    - name: planet-N
+      theta: 6
+      radius: 5
+      period: 30
+    - name: planet-O
+      theta: 5.5
+      radius: 5
+      period: 30
+    - name: planet-P
+      theta: 2.5
+      radius: 1
+      period: 20
+    - name: planet-Q
+      theta: 3.5
+      radius: 5
+      period: 30
+    - name: planet-R
+      theta: 4
+      radius: 5
+      period: 30
+    - name: planet-S
+      theta: 3
+      radius: 1
+      period: 20
+    - name: planet-T
+      theta: 0.9
+      radius: 5
+      period: 30
+    - name: planet-U
+      theta: 0.75
+      radius: 1
+      period: 20
+    - name: planet-V
+      theta: 1
+      radius: 5
+      period: 30
+    - name: planet-W
+      theta: 2.5
+      radius: 5
+      period: 30
+    - name: planet-X
+      theta: 1.5
+      radius: 1
+      period: 20
+    - name: planet-Y
+      theta: 0.5
+      radius: 5
+      period: 30
+    - name: planet-Z
+      theta: 0
+      radius: 5
+      period: 30

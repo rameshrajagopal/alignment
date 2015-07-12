@@ -34,6 +34,9 @@ class InputParser(object):
             except IOError as e:
                 logging.error(str(e))
                 raise e
+            except yaml.scanner.ScannerError as e:
+                logging.error(str(e))
+                raise AlignmentInputError('invalid config file wrong key')
         else:
            raise AlignmentInputError('invalid config file format')
 

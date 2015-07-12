@@ -24,7 +24,7 @@ def print_alignment(planets):
         planets - tuple of tuple(name, angle) in radians
     '''
     planets = sorted(planets, key=get_angle)
-    degree_diff = 5
+    degree_diff = 10
     alignment_list = []
     for e in pairwise(planets):
         if (e[1][1] - e[0][1]) <= degree_diff:
