@@ -50,3 +50,5 @@ def print_alignment(planets):
                print("%s" % e, end="")
            else:
                print("")
+    else:
+        print("")
