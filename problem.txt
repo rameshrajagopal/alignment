@@ -1,0 +1,56 @@
+Create a command line application to print out planets that are aligned.
+
+The application should work for an arbitrary solar system. The planets in the
+solar system will be define in a configuration file with the following format,
+
+  system:
+    - name: planet-A
+      theta: 0
+      radius: 1
+      period: 20
+    - name: planet-B
+      theta: 0
+      radius: 5
+      period: 30
+    - name: planet-C
+      theta: 2
+      radius: 10
+      period: 60
+
+So each planet has a name, an initial angle (theta) given in radians, a radius
+from the sun that it orbits, and length of time it takes to orbit the sun
+(period). Assume that the orbit of each planet is a circle centered on the sun.
+
+The position of each planet can be described by a radius and an angle. The
+radius is constant, but the angle varies with time, i.e. at time 't' the angle
+of a planet is given by,
+
+  theta + 2 pi t / period
+
+The application will not determine the alignments itself. Instead, the
+application must be able to load a set of plugins at runtime that will determine
+whether a particular configuration of planets is 'aligned' according to whatever
+definition the plugin uses for alignment.
+
+The application must take arguments for the configuration file, a list of
+plugins to load, and the time to calculate the alignment for. For example,
+
+  ./alignment.py --config system.yaml --plugins ~/foo.py ~/bar.py ~/baz.py --time 10
+
+and the output will have the format,
+
+  foo: planet-A, planet-B
+  bar: planet-B, planet-C
+  bar: planet-A, planet-B
+  baz: planet-A, planet-B, planet-C
+
+where the application prints out the aligned planets on a new line with the name
+of the plugin that return the alignment.
+
+The application is expected to well documented and clear. Provide explanations
+for the design decisions (e.g. provide rationale for why you did or did not use
+a particular package). Where there is ambiguity in the problem, state the
+assumptions you used to solve it. The application should support versions 2.7.x
+and 3.3.x (or greater) of python. The application should come with a simple
+setup.py for installation, and an example plugin that treats planets as aligned
+if they are within 5 degrees of one another relative to the sun
